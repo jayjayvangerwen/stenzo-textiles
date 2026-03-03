@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alle Producten - Stenzo Textiles</title>
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body >
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <img src="stenzo-logo.png" alt="Stenzo Textiles" class="logo-img">
+    </a>
+    <nav class="main-nav">
+      <a href="index.html" class="">Home</a>
+      <a href="products.html" class="active">Producten</a>
+      <a href="index.html#collections" class="">Collecties</a>
+    </nav>
+    <div class="header-actions">
+      <button class="menu-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="section" style="padding-top: 32px;">
+  <div class="container">
+    <div class="section-header" style="margin-bottom: 24px;">
+      <div>
+        <div class="label">Catalogus</div>
+        <h2>Alle producten</h2>
+      </div>
+    </div>
+
+    <div class="search-bar">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="text" id="product-search" placeholder="Zoek op productnaam, samenstelling, kleur...">
+    </div>
+
+    <div id="active-filters" class="active-filters"></div>
+
+    <div class="catalog-layout">
+      <aside class="filters-sidebar" id="filters-sidebar">
+        <div class="loading-spinner"><div class="spinner"></div></div>
+      </aside>
+
+      <div>
+        <div class="products-header">
+          <div id="products-count" class="products-count">Laden...</div>
+          <div class="products-sort">
+            <select id="product-sort">
+              <option value="default">Standaard</option>
+              <option value="name-asc">Naam A-Z</option>
+              <option value="name-desc">Naam Z-A</option>
+              <option value="newest">Nieuwste eerst</option>
+              <option value="weight-asc">Gewicht oplopend</option>
+              <option value="weight-desc">Gewicht aflopend</option>
+            </select>
+          </div>
+        </div>
+        <div class="product-grid" id="product-grid">
+          <div class="loading-spinner" style="grid-column:1/-1"><div class="spinner"></div></div>
+        </div>
+        <div id="pagination" class="pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="stenzo-logo.png" alt="Stenzo Textiles" class="footer-logo">
+        <p>Premium stoffen voor de mode-industrie. Van Jersey tot Linnen, van Denim tot Borduurwerk.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Navigatie</div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="products.html">Alle Producten</a>
+          <a href="index.html#collections">Collecties</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Contact</div>
+        <div class="footer-links">
+          <a href="tel:+31294410932">+31 294 410 932</a>
+          <a href="mailto:webshop@stenzokids.nl">webshop@stenzokids.nl</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Originele webshop</div>
+        <div class="footer-links">
+          <a href="https://stenzotextiles.com" target="_blank">stenzotextiles.com</a>
+          <a href="https://webshop.stenzotextiles.com" target="_blank">webshop.stenzotextiles.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Lokale kopie &mdash; gegenereerd op 03-03-2026</span>
+      <span>Data via Kartelam API</span>
+    </div>
+  </div>
+</footer>
+<script src="js/app.js"></script>
+</body>
+</html>
