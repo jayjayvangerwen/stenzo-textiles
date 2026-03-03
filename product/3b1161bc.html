@@ -4,8 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>10210-102 - Stenzo Textiles</title>
+  <meta name="description" content="10210-102 - Gebreid - Katoen 70% Polyester 30% - 290 g/m² - 145 cm breed">
+  <meta property="og:title" content="10210-102 - Stenzo Textiles">
+  <meta property="og:description" content="10210-102 - Gebreid - Katoen 70% Polyester 30% - 290 g/m² - 145 cm breed">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://pub-4f2ad77c90384909a01ac0ac34701cd2.r2.dev/3b1161bc_10210-102/10210-102_0_bdae70531d224766a2fe8fa869ddea4b.jpg">
   <link rel="stylesheet" href="../css/style.css">
-  <script src="../js/jspdf.umd.min.js"></script>
+  
 </head>
 <body >
 <header class="site-header">
@@ -43,8 +48,8 @@
 
     <div class="product-layout">
       <div class="gallery">
-        <div class="gallery-main"><img src="https://cdn.kartelam.workers.dev/bdae70531d224766a2fe8fa869ddea4b" alt="10210-102"></div>
-        <div class="gallery-thumbs"><div class="gallery-thumb active"><img src="https://cdn.kartelam.workers.dev/bdae70531d224766a2fe8fa869ddea4b" alt="Thumb 1"></div><div class="gallery-thumb "><img src="https://cdn.kartelam.workers.dev/5db9cb02f1fa42a88cf25ad34c5ba168" alt="Thumb 2"></div><div class="gallery-thumb "><img src="https://cdn.kartelam.workers.dev/c7a7ec5d56c74fb88b603b1a9243dc99" alt="Thumb 3"></div></div>
+        <div class="gallery-main"><img src="https://pub-4f2ad77c90384909a01ac0ac34701cd2.r2.dev/3b1161bc_10210-102/10210-102_0_bdae70531d224766a2fe8fa869ddea4b.jpg" alt="10210-102"></div>
+        <div class="gallery-thumbs"><div class="gallery-thumb active"><img src="https://pub-4f2ad77c90384909a01ac0ac34701cd2.r2.dev/3b1161bc_10210-102/10210-102_0_bdae70531d224766a2fe8fa869ddea4b.jpg" alt="Thumb 1"></div><div class="gallery-thumb "><img src="https://pub-4f2ad77c90384909a01ac0ac34701cd2.r2.dev/3b1161bc_10210-102/10210-102_1_5db9cb02f1fa42a88cf25ad34c5ba168.jpg" alt="Thumb 2"></div><div class="gallery-thumb "><img src="https://pub-4f2ad77c90384909a01ac0ac34701cd2.r2.dev/3b1161bc_10210-102/10210-102_2_c7a7ec5d56c74fb88b603b1a9243dc99.jpg" alt="Thumb 3"></div></div>
       </div>
 
       <div class="product-info">
@@ -81,117 +86,273 @@
   <div class="lightbox-close">&times;</div>
   <img id="lightbox-img" src="" alt="Lightbox">
 </div><script>
-const pdfData = {"name": "10210-102", "code": "", "fabricType": "Gebreid", "knitType": "", "weave": "", "pattern": "", "quality": "Basis", "touch": "", "stretch": "Rek in de breedte", "finishing": "", "dyeing": "", "origin": "", "color": "", "weight": "290 g/m²", "width": "145 cm", "stockType": "meter", "compositions": [{"name": "Katoen", "value": 70}, {"name": "Polyester", "value": 30}], "collections": [], "description": "", "image": "https://cdn.kartelam.workers.dev/bdae70531d224766a2fe8fa869ddea4b"};
-function generatePDF() {
-  const { jsPDF } = window.jspdf;
-  const doc = new jsPDF('p', 'mm', 'a4');
-  const w = 210, h = 297;
-  const margin = 20;
+const pdfData = {"name": "10210-102", "code": "", "fabricType": "Gebreid", "weight": "290", "width": "145", "compositionText": "Katoen 70% Polyester 30%", "collections": [], "allImages": [{"src": "https://pub-4f2ad77c90384909a01ac0ac34701cd2.r2.dev/3b1161bc_10210-102/10210-102_0_bdae70531d224766a2fe8fa869ddea4b.jpg", "code": "10210-102"}, {"src": "https://pub-4f2ad77c90384909a01ac0ac34701cd2.r2.dev/3b1161bc_10210-102/10210-102_1_5db9cb02f1fa42a88cf25ad34c5ba168.jpg", "code": "10210-102"}, {"src": "https://pub-4f2ad77c90384909a01ac0ac34701cd2.r2.dev/3b1161bc_10210-102/10210-102_2_c7a7ec5d56c74fb88b603b1a9243dc99.jpg", "code": "10210-102"}]};
 
-  // Header bar
-  doc.setFillColor(229, 0, 109);
-  doc.rect(0, 0, w, 40, 'F');
-  doc.setTextColor(255, 255, 255);
-  doc.setFontSize(24);
-  doc.setFont('helvetica', 'bold');
-  doc.text('STENZO TEXTILES', margin, 27);
-
-  // Product name
-  doc.setTextColor(26, 26, 26);
-  doc.setFontSize(20);
-  doc.setFont('helvetica', 'bold');
-  doc.text(pdfData.name || '', margin, 58);
-
-  // Subtitle
-  let subtitle = [pdfData.fabricType, pdfData.knitType, pdfData.color].filter(Boolean).join(' \u00B7 ');
-  doc.setFontSize(11);
-  doc.setFont('helvetica', 'normal');
-  doc.setTextColor(100, 100, 100);
-  doc.text(subtitle, margin, 66);
-
-  // Specs table
-  let y = 80;
-  doc.setDrawColor(230, 230, 230);
-  const specs = [
-    ['Artikelnummer', pdfData.code],
-    ['Stofsoort', pdfData.fabricType],
-    ['Breitype', pdfData.knitType],
-    ['Weefsel', pdfData.weave],
-    ['Patroon', pdfData.pattern],
-    ['Kwaliteit', pdfData.quality],
-    ['Gevoel', pdfData.touch],
-    ['Rek', pdfData.stretch],
-    ['Afwerking', pdfData.finishing],
-    ['Verftype', pdfData.dyeing],
-    ['Herkomst', pdfData.origin],
-    ['Kleur', pdfData.color],
-    ['Gewicht', pdfData.weight],
-    ['Stofbreedte', pdfData.width],
-    ['Verkoopeenheid', pdfData.stockType],
-  ].filter(s => s[1]);
-
-  doc.setFontSize(13);
-  doc.setFont('helvetica', 'bold');
-  doc.setTextColor(229, 0, 109);
-  doc.text('PRODUCTKENMERKEN', margin, y);
-  y += 8;
-
-  specs.forEach(([label, val]) => {
-    doc.setFontSize(10);
-    doc.setFont('helvetica', 'normal');
-    doc.setTextColor(100, 100, 100);
-    doc.text(label, margin, y);
-    doc.setTextColor(26, 26, 26);
-    doc.text(String(val), margin + 55, y);
-    doc.line(margin, y + 2, w - margin, y + 2);
-    y += 7;
+function loadImage(src, asPng) {
+  return new Promise(resolve => {
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = () => {
+      const c = document.createElement('canvas');
+      c.width = img.naturalWidth;
+      c.height = img.naturalHeight;
+      const ctx = c.getContext('2d');
+      if (!asPng) {
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, c.width, c.height);
+      }
+      ctx.drawImage(img, 0, 0);
+      try {
+        const fmt = asPng ? 'image/png' : 'image/jpeg';
+        resolve({ data: c.toDataURL(fmt, 0.92), w: img.naturalWidth, h: img.naturalHeight, fmt: asPng ? 'PNG' : 'JPEG' });
+      } catch(e) { resolve(null); }
+    };
+    img.onerror = () => resolve(null);
+    img.src = src;
   });
+}
 
-  // Composition
-  if (pdfData.compositions && pdfData.compositions.length > 0) {
-    y += 6;
-    doc.setFontSize(13);
-    doc.setFont('helvetica', 'bold');
-    doc.setTextColor(229, 0, 109);
-    doc.text('SAMENSTELLING', margin, y);
-    y += 8;
-    pdfData.compositions.forEach(c => {
-      doc.setFontSize(10);
+function loadScript(src) {
+  return new Promise((resolve, reject) => {
+    if (document.querySelector('script[src="' + src + '"]')) return resolve();
+    const s = document.createElement('script');
+    s.src = src;
+    s.onload = resolve;
+    s.onerror = reject;
+    document.head.appendChild(s);
+  });
+}
+
+async function generatePDF() {
+  const btn = document.getElementById('pdf-btn');
+  const origHTML = btn.innerHTML;
+  btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg> PDF genereren...';
+  btn.disabled = true;
+
+  try {
+    // Lazy load jsPDF (358KB) only when needed
+    await loadScript('../js/jspdf.umd.min.js');
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF('l', 'mm', 'a4');
+    const W = 297, H = 210;
+
+    // Load logo as PNG to preserve transparency on gray header
+    const logoImg = await loadImage('../stenzo-logo.png', true);
+
+    // Helper: draw page header (gray bar + logo + magenta line)
+    function drawHeader() {
+      doc.setFillColor(240, 240, 240);
+      doc.rect(0, 0, W, 48, 'F');
+      if (logoImg) {
+        const lh = 30;
+        const lw = lh * (logoImg.w / logoImg.h);
+        doc.addImage(logoImg.data, logoImg.fmt, (W - lw) / 2, 9, lw, lh);
+      } else {
+        doc.setFontSize(22);
+        doc.setFont('helvetica', 'bold');
+        doc.setTextColor(229, 0, 109);
+        doc.text('STENZO TEXTILES', W / 2, 30, { align: 'center' });
+      }
+      doc.setDrawColor(229, 0, 109);
+      doc.setLineWidth(0.8);
+      doc.line(0, 48, W, 48);
+    }
+
+    // Helper: draw footer
+    function drawFooter() {
+      doc.setFontSize(9);
       doc.setFont('helvetica', 'normal');
-      doc.setTextColor(26, 26, 26);
-      doc.text(c.name + ' ' + c.value + '%', margin, y);
-      doc.setFillColor(230, 230, 230);
-      doc.rect(margin + 55, y - 3, 80, 4, 'F');
-      doc.setFillColor(229, 0, 109);
-      doc.rect(margin + 55, y - 3, 80 * c.value / 100, 4, 'F');
-      y += 7;
-    });
-  }
+      doc.setTextColor(160, 160, 160);
+      doc.text('Powered By', W - 55, H - 8);
+      doc.setFont('helvetica', 'bold');
+      doc.setTextColor(229, 0, 109);
+      doc.text('kartelam.com', W - 33, H - 8);
+    }
 
-  // Description
-  if (pdfData.description) {
-    y += 6;
-    doc.setFontSize(13);
-    doc.setFont('helvetica', 'bold');
-    doc.setTextColor(229, 0, 109);
-    doc.text('BESCHRIJVING', margin, y);
-    y += 7;
-    doc.setFontSize(10);
+    // Helper: draw product image fitted in box
+    function drawImage(imgObj, x, y, maxW, maxH) {
+      if (!imgObj) return;
+      const ratio = imgObj.w / imgObj.h;
+      let drawW = maxW, drawH = maxW / ratio;
+      if (drawH > maxH) { drawH = maxH; drawW = maxH * ratio; }
+      const ox = x + (maxW - drawW) / 2;
+      const oy = y + (maxH - drawH) / 2;
+      doc.addImage(imgObj.data, 'JPEG', ox, oy, drawW, drawH);
+    }
+
+    // ===== PAGE 1: Main product with specs =====
+    drawHeader();
+
+    // Article code - large, top right
+    doc.setFontSize(30);
     doc.setFont('helvetica', 'normal');
-    doc.setTextColor(60, 60, 60);
-    const lines = doc.splitTextToSize(pdfData.description, w - 2 * margin);
-    doc.text(lines, margin, y);
+    doc.setTextColor(42, 42, 42);
+    doc.text(pdfData.name, W - 18, 68, { align: 'right' });
+
+    // Load and draw main product image (left column)
+    const imgs = pdfData.allImages || [];
+    const mainSrc = imgs.length > 0 ? new URL(imgs[0].src, window.location.href).href : null;
+    const mainImg = mainSrc ? await loadImage(mainSrc) : null;
+
+    const imgX = 18, imgY = 58, imgMaxW = 140, imgMaxH = 115;
+    drawImage(mainImg, imgX, imgY, imgMaxW, imgMaxH);
+
+    // Fabric type below image
+    const fabricUpper = (pdfData.fabricType || '').toUpperCase();
+    if (fabricUpper) {
+      doc.setFontSize(7);
+      doc.setFont('helvetica', 'bold');
+      doc.setTextColor(100, 100, 100);
+      doc.text(fabricUpper, imgX + imgMaxW / 2, imgY + imgMaxH + 6, { align: 'center' });
+    }
+
+    // Collection name bar below image
+    let leftY = imgY + imgMaxH + 10;
+    if (pdfData.collections && pdfData.collections.length > 0) {
+      const collName = pdfData.collections[0].toUpperCase();
+      doc.setFontSize(8);
+      doc.setFont('helvetica', 'bold');
+      const collW = Math.max(doc.getTextWidth(collName) + 16, 60);
+      doc.setFillColor(42, 42, 42);
+      doc.rect(imgX + (imgMaxW - collW) / 2, leftY - 1, collW, 8, 'F');
+      doc.setTextColor(255, 255, 255);
+      doc.text(collName, imgX + imgMaxW / 2, leftY + 5, { align: 'center' });
+      leftY += 12;
+    }
+
+    // Variant code below
+    if (imgs.length > 0 && imgs[0].code) {
+      doc.setFontSize(18);
+      doc.setFont('helvetica', 'normal');
+      doc.setTextColor(42, 42, 42);
+      doc.text(imgs[0].code, imgX + imgMaxW / 2, leftY + 6, { align: 'center' });
+    }
+
+    // Right column: specs
+    const rx = 172, specLabelW = 48;
+
+    // Samenstelling
+    let ry = 82;
+    const specRows = [
+      ['Samenstelling', pdfData.compositionText],
+      ['Gewicht (g/m2)', pdfData.weight],
+      ['Stofbreedte (cm)', pdfData.width],
+    ].filter(s => s[1]);
+
+    specRows.forEach(([label, val]) => {
+      doc.setFontSize(10);
+      doc.setFont('helvetica', 'bold');
+      doc.setTextColor(42, 42, 42);
+      doc.text(label, rx, ry);
+      doc.setFont('helvetica', 'normal');
+      doc.setTextColor(80, 80, 80);
+      doc.text(':  ' + val, rx + specLabelW, ry);
+      ry += 11;
+    });
+
+    // "ALLE PRODUCTEIGENSCHAPPEN" button
+    ry += 8;
+    const btnW = W - 18 - rx;
+    doc.setFillColor(60, 63, 68);
+    doc.roundedRect(rx, ry, btnW, 11, 1.5, 1.5, 'F');
+    doc.setFontSize(10);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(255, 255, 255);
+    doc.text('ALLE PRODUCTEIGENSCHAPPEN', rx + btnW / 2, ry + 7.5, { align: 'center' });
+
+    drawFooter();
+
+    // ===== PAGE 2+: Additional images =====
+    // Group images by variant code (preserving order)
+    const firstCode = imgs.length > 0 ? imgs[0].code : null;
+    const variantOrder = [];
+    const variantMap = {};
+    imgs.forEach((img, i) => {
+      if (!variantMap[img.code]) { variantMap[img.code] = []; variantOrder.push(img.code); }
+      variantMap[img.code].push({ ...img, idx: i });
+    });
+
+    // Helper: draw collection bar + variant code below image area
+    function drawVariantInfo(cx, maxW, startY, code) {
+      let ly = startY;
+      if (pdfData.collections && pdfData.collections.length > 0) {
+        const cn = pdfData.collections[0].toUpperCase();
+        doc.setFontSize(8);
+        doc.setFont('helvetica', 'bold');
+        const cw = Math.max(doc.getTextWidth(cn) + 16, 60);
+        doc.setFillColor(42, 42, 42);
+        doc.rect(cx + (maxW - cw) / 2, ly - 1, cw, 8, 'F');
+        doc.setTextColor(255, 255, 255);
+        doc.text(cn, cx + maxW / 2, ly + 5, { align: 'center' });
+        ly += 12;
+      }
+      doc.setFontSize(18);
+      doc.setFont('helvetica', 'normal');
+      doc.setTextColor(42, 42, 42);
+      doc.text(code, cx + maxW / 2, ly + 6, { align: 'center' });
+    }
+
+    // Helper: draw article code top-right
+    function drawArticleCode() {
+      doc.setFontSize(30);
+      doc.setFont('helvetica', 'normal');
+      doc.setTextColor(42, 42, 42);
+      doc.text(pdfData.name, W - 18, 68, { align: 'right' });
+    }
+
+    for (const code of variantOrder) {
+      const varImgs = variantMap[code];
+      const isFirst = (code === firstCode);
+
+      if (isFirst) {
+        // First variant: remaining images (skip idx 0, already on page 1) get full pages
+        for (let j = 1; j < varImgs.length; j++) {
+          doc.addPage('l');
+          drawHeader();
+          drawArticleCode();
+          const src = new URL(varImgs[j].src, window.location.href).href;
+          const imgObj = await loadImage(src);
+          drawImage(imgObj, imgX, imgY, imgMaxW, imgMaxH);
+          drawVariantInfo(imgX, imgMaxW, imgY + imgMaxH + 10, code);
+          drawFooter();
+        }
+      } else {
+        // Other variants: group images side by side on one page
+        doc.addPage('l');
+        drawHeader();
+        drawArticleCode();
+
+        if (varImgs.length === 1) {
+          const src = new URL(varImgs[0].src, window.location.href).href;
+          const imgObj = await loadImage(src);
+          drawImage(imgObj, imgX, imgY, imgMaxW, imgMaxH);
+          drawVariantInfo(imgX, imgMaxW, imgY + imgMaxH + 10, code);
+        } else {
+          // Two or more images side by side within the left area
+          const gap = 14;
+          const totalW = imgMaxW + 10;
+          const sideW = (totalW - gap) / 2;
+          for (let j = 0; j < Math.min(varImgs.length, 2); j++) {
+            const ox = imgX + j * (sideW + gap);
+            const src = new URL(varImgs[j].src, window.location.href).href;
+            const imgObj = await loadImage(src);
+            drawImage(imgObj, ox, imgY, sideW, imgMaxH);
+            drawVariantInfo(ox, sideW, imgY + imgMaxH + 10, code);
+          }
+        }
+
+        drawFooter();
+      }
+    }
+
+    doc.save((pdfData.name || 'product') + '.pdf');
+  } catch(e) {
+    console.error('PDF generation error:', e);
+    alert('PDF genereren mislukt: ' + e.message);
+  } finally {
+    btn.innerHTML = origHTML;
+    btn.disabled = false;
   }
-
-  // Footer
-  doc.setFillColor(42, 42, 42);
-  doc.rect(0, h - 15, w, 15, 'F');
-  doc.setFontSize(8);
-  doc.setTextColor(180, 180, 180);
-  doc.text('Stenzo Textiles - Premium stoffen voor de mode-industrie', margin, h - 6);
-  doc.text('stenzotextiles.com', w - margin - 30, h - 6);
-
-  doc.save((pdfData.name || 'product') + '.pdf');
 }
 </script>
 <footer class="site-footer">
