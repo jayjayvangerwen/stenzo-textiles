@@ -19,12 +19,19 @@
       <a href="index.html#collections" class="">Collecties</a>
     </nav>
     <div class="header-actions">
-      <button class="menu-toggle" aria-label="Menu">
+      <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('.mobile-nav-overlay').classList.add('active');document.querySelector('.mobile-nav').classList.add('active');">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
 </header>
+<div class="mobile-nav-overlay" onclick="this.classList.remove('active');document.querySelector('.mobile-nav').classList.remove('active');"></div>
+<nav class="mobile-nav">
+  <div class="mobile-nav-close" onclick="document.querySelector('.mobile-nav-overlay').classList.remove('active');this.parentElement.classList.remove('active');">&times;</div>
+  <a href="index.html" class="">Home</a>
+  <a href="products.html" class="active">Producten</a>
+  <a href="index.html#collections" class="">Collecties</a>
+</nav>
 
 <section class="section" style="padding-top: 32px;">
   <div class="container">

@@ -19,12 +19,19 @@
       <a href="../index.html#collections" class="active">Collecties</a>
     </nav>
     <div class="header-actions">
-      <button class="menu-toggle" aria-label="Menu">
+      <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('.mobile-nav-overlay').classList.add('active');document.querySelector('.mobile-nav').classList.add('active');">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
 </header>
+<div class="mobile-nav-overlay" onclick="this.classList.remove('active');document.querySelector('.mobile-nav').classList.remove('active');"></div>
+<nav class="mobile-nav">
+  <div class="mobile-nav-close" onclick="document.querySelector('.mobile-nav-overlay').classList.remove('active');this.parentElement.classList.remove('active');">&times;</div>
+  <a href="../index.html" class="">Home</a>
+  <a href="../products.html" class="">Producten</a>
+  <a href="../index.html#collections" class="active">Collecties</a>
+</nav>
 
 <div class="collection-hero">
   <div class="collection-hero-bg"><img src="https://cdn.kartelam.workers.dev/4e7848c275134fb7af01817b90733490" alt="" loading="lazy"><img src="https://cdn.kartelam.workers.dev/f9b17cd297854761951baac1d4da3535" alt="" loading="lazy"><img src="https://cdn.kartelam.workers.dev/5732a50e0a80467993ea3c79fa7663b6" alt="" loading="lazy"></div>

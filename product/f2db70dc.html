@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>27189 SE - Stenzo Textiles</title>
   <link rel="stylesheet" href="../css/style.css">
-  
+  <script src="../js/jspdf.umd.min.js"></script>
 </head>
 <body >
 <header class="site-header">
@@ -19,12 +19,19 @@
       <a href="../index.html#collections" class="">Collecties</a>
     </nav>
     <div class="header-actions">
-      <button class="menu-toggle" aria-label="Menu">
+      <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('.mobile-nav-overlay').classList.add('active');document.querySelector('.mobile-nav').classList.add('active');">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
 </header>
+<div class="mobile-nav-overlay" onclick="this.classList.remove('active');document.querySelector('.mobile-nav').classList.remove('active');"></div>
+<nav class="mobile-nav">
+  <div class="mobile-nav-close" onclick="document.querySelector('.mobile-nav-overlay').classList.remove('active');this.parentElement.classList.remove('active');">&times;</div>
+  <a href="../index.html" class="">Home</a>
+  <a href="../products.html" class="">Producten</a>
+  <a href="../index.html#collections" class="">Collecties</a>
+</nav>
 
 <section class="product-detail">
   <div class="container">
@@ -44,8 +51,14 @@
         <h1>27189 SE</h1>
         <p class="product-subtitle"></p>
 
+        <button class="pdf-download-btn" onclick="generatePDF()" id="pdf-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PDF downloaden
+        </button>
+
         <div class="variant-selector"><div class="label">Varianten (5)</div><div class="variant-options"><button class="variant-btn active" data-images='[&quot;https://cdn.kartelam.workers.dev/b1be107dacb34397ba1dfdd54d7bd405&quot;, &quot;https://cdn.kartelam.workers.dev/e421a101156f448d9733e50f39cd2911&quot;, &quot;https://cdn.kartelam.workers.dev/643183f749dd4f30830d920c4c84db78&quot;, &quot;https://cdn.kartelam.workers.dev/a090b50b29b74ab9bf11c8d6d44f0f18&quot;, &quot;https://cdn.kartelam.workers.dev/e07b6bd92a1145a9a99f16c6c677ba60&quot;]'>09</button><button class="variant-btn " data-images='[&quot;https://cdn.kartelam.workers.dev/77bb56927d284853b82f82dd7f6247ee&quot;, &quot;https://cdn.kartelam.workers.dev/5951f25edc31474aa76c319397da5f39&quot;, &quot;https://cdn.kartelam.workers.dev/b8e38932e1c44ced97151f7d719aedbd&quot;, &quot;https://cdn.kartelam.workers.dev/af96b066e09f405383218884298844a0&quot;, &quot;https://cdn.kartelam.workers.dev/eff3927bca4748cd82461f9d458caff4&quot;]'>12</button><button class="variant-btn " data-images='[&quot;https://cdn.kartelam.workers.dev/a578b28a326249209bea97ef4815a682&quot;, &quot;https://cdn.kartelam.workers.dev/5cf103d8c35c4fbb9e3197a349c5030a&quot;, &quot;https://cdn.kartelam.workers.dev/b899e88fd7df45e2b9610c6f52d7c913&quot;, &quot;https://cdn.kartelam.workers.dev/0fd3bfee1e5249078a7a0992a5ef1fea&quot;, &quot;https://cdn.kartelam.workers.dev/c46e208979894aa0a72755ea67132094&quot;]'>15</button><button class="variant-btn " data-images='[&quot;https://cdn.kartelam.workers.dev/f42a37b376634d97986e742aa631f6e1&quot;, &quot;https://cdn.kartelam.workers.dev/029a6c029ea74c8da606b65965738783&quot;, &quot;https://cdn.kartelam.workers.dev/8c4afbfb29d74abf82ecf31a2a3a5cd0&quot;, &quot;https://cdn.kartelam.workers.dev/761e350c533f4991a8d33e1cd511c0bb&quot;, &quot;https://cdn.kartelam.workers.dev/0cc705e8783a4e2baa6b95a73deea9fe&quot;]'>23</button><button class="variant-btn " data-images='[&quot;https://cdn.kartelam.workers.dev/352bc9f8914847dbb65067f801ff5f9f&quot;, &quot;https://cdn.kartelam.workers.dev/ed53ef56ad974ea89ff9768f439419ff&quot;, &quot;https://cdn.kartelam.workers.dev/daba2862d06b4354a6dfce5eedf1f621&quot;, &quot;https://cdn.kartelam.workers.dev/15eb94d7d1104097b1c0efb89abc6253&quot;, &quot;https://cdn.kartelam.workers.dev/a289984a8fc24e2c8a16052b81aaf51a&quot;]'>99</button></div></div>
 
+        
         <div class="specs-section">
       <div class="label">Samenstelling</div>
       <div class="composition-bar"><div class="composition-segment" style="width:100%;background:#E5006D"></div></div>
@@ -54,10 +67,11 @@
 
         <div class="specs-section">
           <div class="label">Productkenmerken</div>
-          <table class="specs-table"><tr><td>Gevoel</td><td>Glans</td></tr><tr><td>Gewicht</td><td>110 g/m²</td></tr><tr><td>Stofbreedte</td><td>150 cm</td></tr></table>
+          <table class="specs-table"><tr><td>Patroon</td><td>Seersucker</td></tr><tr><td>Gevoel</td><td>Glans</td></tr><tr><td>Gewicht</td><td>110 g/m²</td></tr><tr><td>Stofbreedte</td><td>150 cm</td></tr><tr><td>Verkoopeenheid</td><td>meter</td></tr></table>
         </div>
 
         <div class="specs-section"><div class="label">Collecties</div><div class="product-card-specs" style="margin-top:8px"><span class="spec-tag">Zomercollectie 2026</span> <span class="spec-tag">Seersucker Katoen</span></div></div>
+        
       </div>
     </div>
   </div>
@@ -66,7 +80,120 @@
 <div class="lightbox" id="lightbox">
   <div class="lightbox-close">&times;</div>
   <img id="lightbox-img" src="" alt="Lightbox">
-</div>
+</div><script>
+const pdfData = {"name": "27189 SE", "code": "", "fabricType": "", "knitType": "", "weave": "", "pattern": "Seersucker", "quality": "", "touch": "Glans", "stretch": "", "finishing": "", "dyeing": "", "origin": "", "color": "", "weight": "110 g/m²", "width": "150 cm", "stockType": "meter", "compositions": [{"name": "Katoen", "value": 100}], "collections": ["Zomercollectie 2026", "Seersucker Katoen"], "description": "", "image": "https://cdn.kartelam.workers.dev/b1be107dacb34397ba1dfdd54d7bd405"};
+function generatePDF() {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF('p', 'mm', 'a4');
+  const w = 210, h = 297;
+  const margin = 20;
+
+  // Header bar
+  doc.setFillColor(229, 0, 109);
+  doc.rect(0, 0, w, 40, 'F');
+  doc.setTextColor(255, 255, 255);
+  doc.setFontSize(24);
+  doc.setFont('helvetica', 'bold');
+  doc.text('STENZO TEXTILES', margin, 27);
+
+  // Product name
+  doc.setTextColor(26, 26, 26);
+  doc.setFontSize(20);
+  doc.setFont('helvetica', 'bold');
+  doc.text(pdfData.name || '', margin, 58);
+
+  // Subtitle
+  let subtitle = [pdfData.fabricType, pdfData.knitType, pdfData.color].filter(Boolean).join(' \u00B7 ');
+  doc.setFontSize(11);
+  doc.setFont('helvetica', 'normal');
+  doc.setTextColor(100, 100, 100);
+  doc.text(subtitle, margin, 66);
+
+  // Specs table
+  let y = 80;
+  doc.setDrawColor(230, 230, 230);
+  const specs = [
+    ['Artikelnummer', pdfData.code],
+    ['Stofsoort', pdfData.fabricType],
+    ['Breitype', pdfData.knitType],
+    ['Weefsel', pdfData.weave],
+    ['Patroon', pdfData.pattern],
+    ['Kwaliteit', pdfData.quality],
+    ['Gevoel', pdfData.touch],
+    ['Rek', pdfData.stretch],
+    ['Afwerking', pdfData.finishing],
+    ['Verftype', pdfData.dyeing],
+    ['Herkomst', pdfData.origin],
+    ['Kleur', pdfData.color],
+    ['Gewicht', pdfData.weight],
+    ['Stofbreedte', pdfData.width],
+    ['Verkoopeenheid', pdfData.stockType],
+  ].filter(s => s[1]);
+
+  doc.setFontSize(13);
+  doc.setFont('helvetica', 'bold');
+  doc.setTextColor(229, 0, 109);
+  doc.text('PRODUCTKENMERKEN', margin, y);
+  y += 8;
+
+  specs.forEach(([label, val]) => {
+    doc.setFontSize(10);
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor(100, 100, 100);
+    doc.text(label, margin, y);
+    doc.setTextColor(26, 26, 26);
+    doc.text(String(val), margin + 55, y);
+    doc.line(margin, y + 2, w - margin, y + 2);
+    y += 7;
+  });
+
+  // Composition
+  if (pdfData.compositions && pdfData.compositions.length > 0) {
+    y += 6;
+    doc.setFontSize(13);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(229, 0, 109);
+    doc.text('SAMENSTELLING', margin, y);
+    y += 8;
+    pdfData.compositions.forEach(c => {
+      doc.setFontSize(10);
+      doc.setFont('helvetica', 'normal');
+      doc.setTextColor(26, 26, 26);
+      doc.text(c.name + ' ' + c.value + '%', margin, y);
+      doc.setFillColor(230, 230, 230);
+      doc.rect(margin + 55, y - 3, 80, 4, 'F');
+      doc.setFillColor(229, 0, 109);
+      doc.rect(margin + 55, y - 3, 80 * c.value / 100, 4, 'F');
+      y += 7;
+    });
+  }
+
+  // Description
+  if (pdfData.description) {
+    y += 6;
+    doc.setFontSize(13);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(229, 0, 109);
+    doc.text('BESCHRIJVING', margin, y);
+    y += 7;
+    doc.setFontSize(10);
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor(60, 60, 60);
+    const lines = doc.splitTextToSize(pdfData.description, w - 2 * margin);
+    doc.text(lines, margin, y);
+  }
+
+  // Footer
+  doc.setFillColor(42, 42, 42);
+  doc.rect(0, h - 15, w, 15, 'F');
+  doc.setFontSize(8);
+  doc.setTextColor(180, 180, 180);
+  doc.text('Stenzo Textiles - Premium stoffen voor de mode-industrie', margin, h - 6);
+  doc.text('stenzotextiles.com', w - margin - 30, h - 6);
+
+  doc.save((pdfData.name || 'product') + '.pdf');
+}
+</script>
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">

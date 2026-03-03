@@ -56,10 +56,13 @@
   // --- Filter Logic ---
   const FILTER_CONFIG = [
     { key: 'fabricType', label: 'Stofsoort' },
+    { key: 'knitType', label: 'Breitype' },
     { key: 'color', label: 'Kleur' },
     { key: 'stretch', label: 'Rek' },
+    { key: 'quality', label: 'Kwaliteit' },
     { key: 'finishing', label: 'Afwerking' },
     { key: 'weave', label: 'Weefsel' },
+    { key: 'pattern', label: 'Patroon' },
     { key: 'dyeingType', label: 'Verftype' },
     { key: 'composition', label: 'Samenstelling' },
   ];
@@ -85,7 +88,7 @@
       // Search
       if (searchQuery) {
         const q = searchQuery.toLowerCase();
-        const searchable = (p.name + ' ' + (p.composition || '') + ' ' + (p.fabricType || '') + ' ' + (p.color || '')).toLowerCase();
+        const searchable = (p.name + ' ' + (p.composition || '') + ' ' + (p.fabricType || '') + ' ' + (p.color || '') + ' ' + (p.knitType || '') + ' ' + (p.quality || '') + ' ' + (p.pattern || '')).toLowerCase();
         if (!searchable.includes(q)) return false;
       }
 
@@ -254,7 +257,7 @@
         </div>
         <div class="product-card-info">
           <div class="product-card-name">${p.name}</div>
-          <div class="product-card-meta">${p.fabricType || ''} ${p.color ? '· ' + p.color : ''}</div>
+          <div class="product-card-meta">${p.fabricType || ''}${p.knitType ? ' · ' + p.knitType : ''}${p.color ? ' · ' + p.color : ''}</div>
           <div class="product-card-specs">
             ${specs.slice(0, 3).map(s => `<span class="spec-tag">${s}</span>`).join('')}
           </div>

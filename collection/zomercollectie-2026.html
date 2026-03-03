@@ -19,12 +19,19 @@
       <a href="../index.html#collections" class="active">Collecties</a>
     </nav>
     <div class="header-actions">
-      <button class="menu-toggle" aria-label="Menu">
+      <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('.mobile-nav-overlay').classList.add('active');document.querySelector('.mobile-nav').classList.add('active');">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
 </header>
+<div class="mobile-nav-overlay" onclick="this.classList.remove('active');document.querySelector('.mobile-nav').classList.remove('active');"></div>
+<nav class="mobile-nav">
+  <div class="mobile-nav-close" onclick="document.querySelector('.mobile-nav-overlay').classList.remove('active');this.parentElement.classList.remove('active');">&times;</div>
+  <a href="../index.html" class="">Home</a>
+  <a href="../products.html" class="">Producten</a>
+  <a href="../index.html#collections" class="active">Collecties</a>
+</nav>
 
 <div class="collection-hero">
   <div class="collection-hero-bg"><img src="https://cdn.kartelam.workers.dev/6f2e76d3446d4ed4ae0002805eedffd0" alt="" loading="lazy"><img src="https://cdn.kartelam.workers.dev/1a46f4445db54eb1a67b638b788f1a3a" alt="" loading="lazy"><img src="https://cdn.kartelam.workers.dev/3bf514b9744d4ba89652918962c9bbe9" alt="" loading="lazy"><img src="https://cdn.kartelam.workers.dev/eb1f3aa02de94dd0b5c255c8a388cf9e" alt="" loading="lazy"><img src="https://cdn.kartelam.workers.dev/b951c9de07754de9b9edd3eb683b0311" alt="" loading="lazy"><img src="https://cdn.kartelam.workers.dev/717c87148a8d45889765a2783dff6724" alt="" loading="lazy"><img src="https://cdn.kartelam.workers.dev/76c1b4a2a59544f6a893f167f2461142" alt="" loading="lazy"><img src="https://cdn.kartelam.workers.dev/4c5a625a842c4894a0481fc50e5743a2" alt="" loading="lazy"><img src="https://cdn.kartelam.workers.dev/6a1861566b7d42daaa54856724a9d2ea" alt="" loading="lazy"><img src="https://cdn.kartelam.workers.dev/96e16747e28c432d9c3090c0eee03096" alt="" loading="lazy"><img src="https://cdn.kartelam.workers.dev/8513abb7da8d458eab312b0233edd849" alt="" loading="lazy"><img src="https://cdn.kartelam.workers.dev/1bbaf7529c68464a873ed4351d2571d2" alt="" loading="lazy"></div>
