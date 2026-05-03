@@ -8,9 +8,21 @@
   <meta property="og:title" content="Denim Borduurwerk - Stenzo Textiles">
   <meta property="og:description" content="Stenzo Textiles - Premium stoffen catalogus met 1993 producten. Jersey, Denim, Linnen en meer.">
   <meta property="og:type" content="website">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
   
   <link rel="stylesheet" href="../css/style.css">
   
+  <script>
+    (function(){
+      var PW_HASH = '074250b6b55b79088ce132bc248751c0e3888c10edae5bd9a1231890d9c5d6a1';
+      var session = sessionStorage.getItem('stenzo_auth');
+      if (session !== PW_HASH) {
+        var depth = 1;
+        var loginPath = depth === 0 ? 'login.html' : '../'.repeat(depth) + 'login.html';
+        window.location.replace(loginPath + '?next=' + encodeURIComponent(window.location.pathname));
+      }
+    })();
+  </script>
 </head>
 <body >
 <header class="site-header">
@@ -39,7 +51,7 @@
 </nav>
 
 <div class="collection-hero">
-  <div class="collection-hero-bg"><img src="https://pub-4f2ad77c90384909a01ac0ac34701cd2.r2.dev/4dd5df42_27352/0911_0_4e7848c275134fb7af01817b90733490.jpg" alt="" loading="lazy"><img src="https://pub-4f2ad77c90384909a01ac0ac34701cd2.r2.dev/f5ae5c4c_27351/15_0_f9b17cd297854761951baac1d4da3535.jpg" alt="" loading="lazy"><img src="https://pub-4f2ad77c90384909a01ac0ac34701cd2.r2.dev/176769c8_27350-09/27350-09_0_5732a50e0a80467993ea3c79fa7663b6.jpg" alt="" loading="lazy"></div>
+  <div class="collection-hero-bg"><img src="../images/4dd5df42_27352/0911_0_4e7848c275134fb7af01817b90733490.jpg" alt="" loading="lazy"><img src="../images/f5ae5c4c_27351/15_0_f9b17cd297854761951baac1d4da3535.jpg" alt="" loading="lazy"><img src="../images/176769c8_27350-09/27350-09_0_5732a50e0a80467993ea3c79fa7663b6.jpg" alt="" loading="lazy"></div>
   <div class="collection-hero-overlay"></div>
   <div class="collection-hero-content">
     <div class="label" style="color: rgba(255,255,255,0.5); margin-bottom: 8px;">Collectie</div>
@@ -52,7 +64,7 @@
   <div class="container">
     <div class="product-grid"><a href="../product/4dd5df42.html" class="product-card">
       <div class="product-card-image">
-        <img src="https://pub-4f2ad77c90384909a01ac0ac34701cd2.r2.dev/4dd5df42_27352/0911_0_4e7848c275134fb7af01817b90733490.jpg" alt="27352" loading="lazy">
+        <img src="../images/4dd5df42_27352/0911_0_4e7848c275134fb7af01817b90733490.jpg" alt="27352" loading="lazy">
         <span class="product-card-badge">2 var</span>
       </div>
       <div class="product-card-info">
@@ -64,7 +76,7 @@
       </div>
     </a><a href="../product/f5ae5c4c.html" class="product-card">
       <div class="product-card-image">
-        <img src="https://pub-4f2ad77c90384909a01ac0ac34701cd2.r2.dev/f5ae5c4c_27351/15_0_f9b17cd297854761951baac1d4da3535.jpg" alt="27351" loading="lazy">
+        <img src="../images/f5ae5c4c_27351/15_0_f9b17cd297854761951baac1d4da3535.jpg" alt="27351" loading="lazy">
         <span class="product-card-badge">6 var</span>
       </div>
       <div class="product-card-info">
@@ -76,7 +88,7 @@
       </div>
     </a><a href="../product/176769c8.html" class="product-card">
       <div class="product-card-image">
-        <img src="https://pub-4f2ad77c90384909a01ac0ac34701cd2.r2.dev/176769c8_27350-09/27350-09_0_5732a50e0a80467993ea3c79fa7663b6.jpg" alt="27350-09" loading="lazy">
+        <img src="../images/176769c8_27350-09/27350-09_0_5732a50e0a80467993ea3c79fa7663b6.jpg" alt="27350-09" loading="lazy">
         
       </div>
       <div class="product-card-info">
@@ -120,7 +132,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>Lokale kopie &mdash; gegenereerd op 03-03-2026</span>
+      <span>Lokale kopie &mdash; gegenereerd op 01-05-2026</span>
       <span>Data via Kartelam API</span>
     </div>
   </div>

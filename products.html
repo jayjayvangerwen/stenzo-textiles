@@ -8,9 +8,21 @@
   <meta property="og:title" content="Alle Producten - Stenzo Textiles">
   <meta property="og:description" content="Stenzo Textiles - Premium stoffen catalogus met 1993 producten. Jersey, Denim, Linnen en meer.">
   <meta property="og:type" content="website">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
   
   <link rel="stylesheet" href="css/style.css">
   
+  <script>
+    (function(){
+      var PW_HASH = '074250b6b55b79088ce132bc248751c0e3888c10edae5bd9a1231890d9c5d6a1';
+      var session = sessionStorage.getItem('stenzo_auth');
+      if (session !== PW_HASH) {
+        var depth = 0;
+        var loginPath = depth === 0 ? 'login.html' : '../'.repeat(depth) + 'login.html';
+        window.location.replace(loginPath + '?next=' + encodeURIComponent(window.location.pathname));
+      }
+    })();
+  </script>
 </head>
 <body >
 <header class="site-header">
@@ -112,7 +124,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>Lokale kopie &mdash; gegenereerd op 03-03-2026</span>
+      <span>Lokale kopie &mdash; gegenereerd op 01-05-2026</span>
       <span>Data via Kartelam API</span>
     </div>
   </div>
