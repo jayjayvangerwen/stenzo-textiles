@@ -392,7 +392,9 @@
                 initGallery();
               }
             }
-          } catch (e) {}
+          } catch (e) {
+            console.error('Failed to parse variant images:', e);
+          }
         }
       });
     });
